@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title>Regist</title>
+</head>
+<body>
+  {% if message %}
+  <p style="color:red">{{ message }}</p>
+  {% endif %}
+  <form action="/regist" method="post">
+    <legend>Regist:</legend>
+    <p><input name="studentName" placeholder="studentName"></p>
+    <p><input name="classRoomNumber" placeholder="classRoomNumber"></p>
+    <p><input name="gender" placeholder="gender"></p>
+    <p><input name="age" placeholder="age"></p>
+    <p><input name="score" placeholder="score"></p>
+    <p><button type="submit">Regist</button></p>
+  </form>
+</body>
+</html>

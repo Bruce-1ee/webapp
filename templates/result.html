@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>result</title>
+</head>
+<body>
+  <table border="1" width = "50%" cellspacing='1' cellpadding='1'>
+  <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>class</th>
+    <th>age</th>
+    <th>gender</th>
+    <th>score</th>
+    <th>delete</th>
+  </tr>
+
+  {% for re in res %}
+  <tr>
+    {% for e in re %}
+      <td>
+           <span>{{e}}</span>       
+      </td>
+    {% endfor %}
+      <td>
+        <a href="{{ url_for('delete', id=re[0]) }}">delete</a>
+      </td>
+  </tr>
+  {% endfor %}
+  
+  </table>
+  <a href="{{ url_for('home') }}">home</a>
+</body>
+</html>
